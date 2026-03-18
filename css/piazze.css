@@ -1,0 +1,387 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#F5F5F5;
+font-family:'Lato', sans-serif;
+}
+
+
+
+
+
+
+.navbar{
+display:grid;
+grid-template-columns:1fr auto 1fr;
+align-items:center;
+padding:20px 80px;
+position:absolute;
+top:40px;
+width:100%;
+z-index:10;
+}
+
+
+
+.navbar::after{
+content:"";
+position:absolute;
+bottom:-10px;
+left:80px;
+width: 91.1%;
+height:2px;
+background:#FFD732;
+}
+
+
+.nav-links{
+display:flex;
+gap:40px;
+list-style:none;
+justify-self:start;
+}
+
+.nav-links a{
+text-decoration:none;
+color:black;
+font-size:20px;
+}
+
+
+.nav-logo{
+list-style:none;
+justify-self:center;
+}
+
+.nav-logo a{
+text-decoration:none;
+font-family:'Playfair Display', serif;
+font-size:42px;
+color:#0D3B66;
+}
+
+.nav-linkd{
+display:flex;
+gap:40px;
+list-style:none;
+justify-self:end;
+}
+
+.nav-linkd a{
+text-decoration:none;
+color:#333;
+font-size:20px;
+}
+
+
+.hero_pagina_piazze{
+ display:flex;
+justify-content:center;
+margin-top:140px;
+}
+
+
+.hero_content_piazze{
+ position: relative;
+width:91.1%;          
+margin-top:100px;
+aspect-ratio:280/107;
+overflow: hidden;
+}
+
+
+.hero_content_piazze h1{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+font-family:'Playfair Display', serif;
+font-size:60px;
+font-weight:700;
+text-align:center; }
+
+.hero_content_piazze img{
+width:100%;
+height: 455px;
+object-fit:cover;
+border-radius:20px;
+}
+.hero_content_piazze::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height: 455px;;
+background:linear-gradient(
+rgba(222,222,222,0.2) 0%,
+rgba(255,242,189,0.3) 100%
+);
+border-radius:20px;
+}
+
+.piazze{
+padding: 80px 0px;
+text-align:center;
+}
+
+.piazze-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap:50px;
+padding-top:40px;
+}
+
+.content{
+border-radius:20px;
+overflow:hidden;
+background-color:#FFF2BD;
+transition:0.3s;
+cursor:pointer;
+margin: 20px;
+}
+
+.content:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+.content_img img{
+width:100%;
+height: 260px;
+object-fit:cover;
+display:block;
+}
+.content_text h3{
+margin-bottom:6px;
+font-family:'Lato', sans-serif;
+font-size:20px;
+font-weight:600;
+text-align: left;
+padding-top:10px;
+padding-left: 15px;
+padding-bottom: 0px;
+padding-right: 0;
+}
+.location{
+display:flex;
+align-items:center;
+gap:6px;
+text-align: left;
+padding-left: 15px;
+padding-top: 0px;
+padding-bottom: 10px;   
+padding-right: 0;
+}
+
+.location img{
+width:14px;
+}
+
+.location p{
+font-size:16px;
+color:#444;
+}
+
+
+
+main{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.content {
+  transition: transform 0.3s ease;
+}
+
+.card-link:hover .content {
+  transform: scale(1.03);
+}
+
+footer{
+background:#FFF2BD;
+padding:60px 80px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+
+
+.footer-left,
+.footer-center,
+.footer-right{
+display:flex;
+flex-direction:column;
+}
+
+
+
+.footer-center h2{
+font-family:'Playfair Display', serif;
+font-size:36px;
+color:#0D3B66;
+text-align:center;
+flex:1;
+margin-right:200px
+
+}
+
+.footer-left h4{
+font-family:'Playfair Display', serif;
+font-size:22px;
+margin-bottom:10px;
+}
+
+
+.footer-right h4{
+font-family:'Playfair Display', serif;
+font-size:22px;
+margin-bottom:10px;
+text-align:right;
+margin: 0px 200px 6px 0px;
+
+}
+
+.social-icons{
+display:flex;
+gap:15px;
+justify-content:flex-end;
+}
+
+.social-icons img{
+width:40px;
+}
+
+
+
+@media (max-width: 992px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 15px;
+    padding: 20px;
+    top: 20px;
+  }
+
+  .navbar::after {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .nav-links,
+  .nav-linkd {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a,
+  .nav-linkd a {
+    font-size: 16px;
+  }
+
+  .nav-logo a {
+    font-size: 32px;
+  }
+
+  .hero_pagina_piazze {
+    margin-top: 180px;
+    padding: 0 15px;
+  }
+
+  .hero_content_piazze {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .hero_content_piazze img,
+  .hero_content_piazze::before {
+    width: 100%;
+    height: 320px;
+  }
+
+  .hero_content_piazze h1 {
+    font-size: 40px;
+    width: 90%;
+  }
+
+  .piazze {
+    padding: 60px 15px;
+    width: 100%;
+  }
+
+  .piazze-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+  }
+
+  .content_img img {
+    height: 220px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-center h2,
+  .footer-right h4 {
+    margin-right: 0;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .piazze-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    max-width: 320px;
+  }
+
+  .hero_content_piazze img,
+  .hero_content_piazze::before {
+    height: 250px;
+  }
+
+  .hero_content_piazze h1 {
+    font-size: 32px;
+  }
+
+  .nav-logo a {
+    font-size: 26px;
+  }
